@@ -75,11 +75,16 @@ body * {
     transform: translateY(-50%);
     top: 50%;
     left: 0;
+    animation: slide-back 0.2s;
 } 
 
 .light #switch button {
-    right: 0;
-    left: initial;
+    animation: slide 0.2s forwards;
+}
+/* o forwards serve para manter as propriedas da animação, ou seja, para não voltar pro começo*/
+
+#switch button:hover {
+    outline:5px solid var(--social-links-hover);
 }
 
 #switch span {
@@ -169,4 +174,23 @@ footer a:hover {
         --bg-url: url(./Assets/bg-desktop-light.jpg);
     }
 
+}
+
+/*animation*/
+@keyframes slide {
+    from {
+        left: 0;
+    }
+    to { 
+        left:50%; 
+    }
+}
+ 
+@keyframes slide-back {
+    from { 
+        left:50%;
+    }
+    to {
+        left: 0;
+    }
 }
