@@ -157,3 +157,15 @@ footer {
 footer a:hover {
     font-weight: 700;
 }
+
+/* media queries*/
+@media (min-width: 700px) {
+    :root {
+        --bg-url: url(./Assets/bg-desktop.jpg);
+    }
+
+    .light {
+        --bg-url: url(./Assets/bg-desktop-light.jpg);
+    }
+
+}
